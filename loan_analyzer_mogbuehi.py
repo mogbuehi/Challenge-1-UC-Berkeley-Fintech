@@ -13,7 +13,7 @@ avg_loans = sum_loans/amt_loans
 
 print (f'The total amount of loans is {amt_loans}.')
 print (f'The sum of all loans is ${sum_loans}.')
-print (f'The average loan price is ${avg_loans}.')
+print (f'The average loan price is ${round(avg_loans)}.')
 
 # Deliniate end of section
 print ('*'*80)
@@ -40,7 +40,7 @@ loan = {
 
 future_value = loan.get('future_value')
 remaining_months = loan.get('remaining_months')
-print(f'The future value of the loan is {future_value}.')
+print(f'The future value of the loan is ${future_value}.')
 print(f'The remaining months on the loan are {remaining_months}.')
 
 # Store 0.2 in `discount_rate` variable.
@@ -82,7 +82,7 @@ def present_value_evaluator (future_value, remaining_months, annual_discount_rat
 
 # Calling function with arguments derived from `new_loan` dict object, and using 0.2 as discount rate.
 present_value_evaluator (new_loan.get('loan_price'), new_loan.get('remaining_months'), 0.2)
-print(f"The present value of the loan is: {present_value}")
+print(f"The present value of the loan is: ${round(present_value, 2)}")
 
 # Deliniate end of section
 print ('*'*80)
